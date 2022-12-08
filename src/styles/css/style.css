@@ -1,0 +1,147 @@
+@import url("./resetStyle.css");
+@import url("./header");
+@import url("./footer");
+@import url("./miniCard");
+@import url("./cart");
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.content {
+  padding: 30px 0;
+  flex: 1 0 auto;
+}
+
+.main__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.main__title {
+  font-size: 30px;
+  color: #444;
+}
+.main__subtitle {
+  font-size: 18px;
+  font-style: italic;
+  color: #777;
+}
+.main__list-title {
+  font-size: 22px;
+}
+.main__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.shop__column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.shop__filters {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.shop__filters-list {
+  display: flex;
+  column-gap: 15px;
+}
+.shop__filters-list span {
+  font-style: italic;
+  color: rgb(0, 42, 255);
+}
+.shop__title {
+  font-weight: 700;
+}
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.search__title {
+  position: absolute;
+  top: -20px;
+  right: 180px;
+}
+.search__form {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+.search__input {
+  flex: 1 1 auto;
+}
+.search__input input {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 3px 5px;
+  font-size: 16px;
+}
+.search__input input:focus {
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 0 0 1px 1px #555;
+}
+.search__submit button {
+  cursor: pointer;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  padding: 3px 5px;
+  background-color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 2px 1px #777;
+}
+.search__submit button:active {
+  position: relative;
+  top: 2px;
+  box-shadow: 0 0 1px;
+}
+
+.filter {
+  position: relative;
+  flex: 0 0 200px;
+}
+.filter__title {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: #333;
+  font-weight: 700;
+}
+.filter select {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 16px;
+  padding: 3px 5px;
+}
+.filter select:focus {
+  outline: none;
+  border: 1px solid #000;
+  box-shadow: 0 0 1px 1px #555;
+}

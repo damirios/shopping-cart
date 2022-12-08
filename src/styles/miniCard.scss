@@ -1,0 +1,127 @@
+.mini-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    background-color: rgba(119, 119, 119, 0.293);
+    padding-bottom: 15px;
+    color: rgb(69, 69, 69);
+    font-size: 20px;
+
+    // .mini-card__image
+    &__image {
+        flex: 0 0 250px;
+
+        & img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    // .mini-card__title
+    &__title {
+        padding: 0 10px;
+        font-size: 24px;
+        text-decoration: underline;
+    }
+
+    // .mini-card__category
+    &__category {
+        padding: 0 10px;
+
+        & span {
+            color: #555;
+            font-weight: 700;
+        }
+    }
+
+    &__price {
+        padding: 0 10px;
+    }
+
+    // .mini-card__color
+    &__color {
+        padding: 0 10px;
+
+        & span {
+            color: #555;
+            font-weight: 700;
+        }
+    }
+
+    // .mini-card__favorite-button
+    &__favorite-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        
+        & img {
+            background-color: white;
+        }
+    }
+
+    &__cart {
+        padding: 0 10px;
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+
+        & button {
+            height: 30px;
+            padding: 3px 5px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #333;
+            background: #fff;
+            box-shadow: 0px 2px 3px #333;
+            cursor: pointer;
+
+            &:active {
+                position: relative;
+                top: 2px;
+                box-shadow: 0px 0px 1px #333;
+            }
+        }
+    }
+
+    &__count {
+        flex: 0 0 50px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+}
+
+.mini-card__color-block {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    position: relative;
+    top: 5px;   
+
+    &.red {
+        background-color: red;
+    }
+    &.blue {
+        background-color: blue;
+    }
+    &.violet {
+        background-color: violet;
+    }
+    &.pink {
+        background-color: pink;
+    }
+    &.green {
+        background-color: green;
+    }
+    &.black {
+        background-color: black;
+    }
+}
