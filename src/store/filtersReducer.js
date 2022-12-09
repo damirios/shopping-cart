@@ -33,13 +33,10 @@ export default function filtersReducer(state = initialState, action) {
             const filteredProductsObject = arrayToObject(filteredProductsArray);
             
             return {
-                products: filteredProductsObject,
-                filters: {
-                    category: category,
-                    color: color,
-                    text: text
-                }
-            }; 
+                category: category,
+                color: color,
+                text: text
+            }
         }
 
         default:

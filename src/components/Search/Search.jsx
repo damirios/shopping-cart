@@ -14,13 +14,22 @@ export default function Search() {
     const [inputText, setInputText] = useState(text);
     const [selectCategory, setSelectCategory] = useState(category);
     const [selectColor, setSelectColor] = useState(color);
-
     function handleSubmit(e) {
         e.preventDefault(); // отменяю перезагрузку страницы
 
-        // получаю соответствующие продукты и изменяю состояние стора
+        // изменяю состояние стора (фильтра)
         dispatch({
             type: 'filters/filtersChanged',
+            payload: {
+                category: selectCategory,
+                color: selectColor,
+                text: inputText
+            }
+        });
+
+        // получаю соответствующие товары и изменяю состояние стора (товары)
+        dispatch({
+            type: 'products/productsFiltered',
             payload: {
                 category: selectCategory,
                 color: selectColor,

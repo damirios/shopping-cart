@@ -1,6 +1,11 @@
 export default function setToLocalStorage(action, chosenItem) {
     if (action === 'addToCart') {
-        const newItems = [...JSON.parse(localStorage.getItem('cart')), chosenItem];
+        let newItems = [];
+        if (JSON.parse(localStorage.getItem('cart')) === null) {
+            newItems = [chosenItem];
+        } else {
+            newItems = [...JSON.parse(localStorage.getItem('cart')), chosenItem];
+        }
         const stringifyItem = JSON.stringify(newItems);
         localStorage.setItem('cart', stringifyItem);
     } else if (action === 'removeFromCart') {
